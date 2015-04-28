@@ -1,0 +1,37 @@
+p{
+	font-size: 20px;
+}
+h1{
+	font-size:40px;
+	color:purple;
+	text-align: center;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+h2{
+	font-size:30px;
+	color:green;
+	text-align: left;
+}
+.nav{
+	color:red;
+	text-align: right;
+}
+.main-container{
+
+}
+.intro-area{
+	
+}
+.sub-header{
+	
+}
+.body-copy{
+
+}
+h1:hover{
+	background: pink;
+}
+img{
+	border:5px solid black;
+}

@@ -1,0 +1,101 @@
+p{
+	text-align:center;
+	padding:30px;
+	font-size:30px;
+	color:white;
+	-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.box{
+	height:100px;
+	width:400px;
+	margin:30px auto;
+	background-color: blue;
+}
+.box1,
+.box4 {
+    -webkit-transition: all 2s ease-in;
+    -moz-transition: all 2s ease-in;
+    -o-transition: all 2s ease-in;
+	transition: all 2s ease-in;
+}
+.box2,
+.box5{
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+.box3,
+.box6{
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+
+.box1:hover{
+	-webkit-transform: translate3d(12px, 50%, 3em);
+	-moz-transform: translate3d(12px, 50%, 3em);
+	-o-transform: translate3d(12px, 50%, 3em);
+	transform: translate3d(12px, 50%, 3em);
+	background-color: lightblue;
+	border-radius: 50%;
+}
+.box1:hover p {
+	color: black;
+}
+.box2:hover{
+	-webkit-transform: scale(0.8) translateX(50px);
+	-moz-transform: scale(0.8) translateX(50px);
+	-o-transform: scale(0.8) translateX(50px);
+	transform: scale(0.8) translateX(50px);
+	background-color: purple;
+}
+.box2:hover p {
+	color: black;
+}
+.box3:hover{
+	-webkit-transform: rotate(45deg) scale(2);
+	-moz-transform: rotate(45deg) scale(2);
+	-o-transform: rotate(45deg) scale(2);
+	transform: rotate(45deg) scale(2);
+	background-color: pink;
+}
+.box3:hover p {
+	color: black;
+}
+.box4:hover{
+	-webkit-transform: rotate(720deg);
+	-moz-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	transform: rotate(720deg);
+	background-color: red;
+}
+.box4:hover p {
+	color: black;
+}
+.box5:hover{
+	-webkit-transform: scale3d(2.5, 1.2, 0.3);
+	-moz-transform: scale3d(2.5, 1.2, 0.3);
+	-o-transform: scale3d(2.5, 1.2, 0.3);
+	transform: scale3d(2.5, 1.2, 0.3);
+	background-color: cyan;
+}
+.box5:hover p {
+	color: black;
+}
+.box6:hover{
+	-webkit-transform: skewX(-30deg);
+	-moz-transform: skewX(-30deg);
+	-o-transform: skewX(-30deg);
+	transform: skewX(-30deg);
+	background-color: magenta;
+	height:200px;
+}
+.box6:hover p {
+	color: black;
+}

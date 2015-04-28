@@ -1,0 +1,213 @@
+
+/************************************
+BASIC SCENE
+************************************/
+
+.divContainer{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  width: 1000px;
+  height: 1000px;
+  border: 5px solid black;
+
+  /*-webkit-transition: background-image 5s ease-in;*/
+  /*transition: background-image 5s ease-in;*/
+  -webkit-animation: skyChange 20s infinite;
+  animation: skyChange 20s infinite;
+
+  overflow: hidden;
+
+}
+
+/*.sky{
+  top:0px;
+  left:0px;
+  margin:0px;
+  padding:0px;
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+  z-index: 0;
+
+
+  background-image: url("images/sky_colors-wide.jpg");
+  -webkit-transition: background-image 5s ease-in;
+  transition: background-image 5s ease-in;
+  -webkit-animation: skyChange 20s infinite;
+  animation: skyChange 20s infinite;
+
+}*/
+
+/*.sky img{
+  height: 800px;
+  width: 600px;
+}*/
+
+.sun {
+/*  width: 100px;
+  height: 100px;*/
+  /*background-color: yellow;*/
+  /*border-radius: 50%;*/
+  /*float: left;*/
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+  border: 5px solid orange;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-animation: day 20s infinite;
+  animation: day 20s infinite;
+  
+}
+
+.moon{
+/*  width: 100px;
+  height: 100px;*/
+  /*background-color: white;*/
+  /*border-radius: 50%;*/
+  /*float: left;*/
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 4;
+  border: 5px solid yellow;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-animation: night 20s infinite;
+  animation: night 20s infinite;
+}
+
+.ground{
+  background-color: darkgreen;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+  border: 5px solid red;
+  /*display: inline-block;*/
+  /*float: left;*/
+  /*clear: all;*/
+}
+
+.grass{
+  /*height: 200px;*/
+  /*width: 50%;*/
+  position: absolute;
+  bottom: -35%;
+  left:-140%;
+  /*bottom: 0%;*/
+  /*left:0%;*/
+  margin: 0px;
+  padding: 0px;
+  z-index: 2;
+  border: 5px solid blue;
+  /*display: inline-block;*/
+  /*float: left;*/
+  /*clear: all;*/
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+
+
+
+/************************************
+ANIMATIONS
+************************************/
+
+@-webkit-keyframes day {
+  0% {
+    opacity: 1;
+    bottom: 0%;
+    left: 0%;
+  }
+  25% {
+    top: 0%%;
+    left: 50%;
+  }
+  50% {
+    bottom: 0%;
+    left: 100%;
+  }
+  51% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes night {
+  0%{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 0%;
+    left: 0%;
+  }
+  75% {
+    top: 0%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes skyChange {
+  0% {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/sky_colors-wide.jpg");*/
+    background-image-height: 50%;
+    background-image-width: 50%;
+    /*background-image-height: 800px;*/
+    /*background-image-width: 600px;*/
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+  50% {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/night_sky.jpg");
+    background-image-height: 50%;
+    background-image-width: 50%;
+    /*background-image-height: 800px;*/
+    /*background-image-width: 600px;*/
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+  100% {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/sky_colors-wide.jpg");
+    background-image-height: 50%;
+    background-image-width: 50%;
+    /*background-image-height: 800px;*/
+    /*background-image-width: 600px;*/
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+}

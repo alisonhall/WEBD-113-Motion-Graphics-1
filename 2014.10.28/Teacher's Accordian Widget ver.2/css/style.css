@@ -1,0 +1,18 @@
+.accordion {
+	width: 40%;
+	margin: 0 auto;
+	background-color: #9AF;
+}
+
+.accordion header,
+.accordion p {
+	padding: 15px;
+}
+
+.accordion header {
+	border-bottom: 1px solid black;
+}
+
+.accordion p {
+	display: none;
+}

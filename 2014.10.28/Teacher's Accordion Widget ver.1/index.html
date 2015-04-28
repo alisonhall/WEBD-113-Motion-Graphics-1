@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal Demo</title>
+	<style>
+		.content {
+			width: 80%;
+			margin: 0 auto;
+		}
+		.button {
+			padding: 15px 25px;
+			background-color: #f89;
+			display: inline-block;
+		}
+		.modal {
+			display: none;
+			position: absolute;
+			top: 15%;
+			left: 50%;
+			margin-left: -300px;
+			width: 500px;
+			padding: 50px;
+			background-color: #A4F;
+			color: #fff;
+			z-index: 2;
+		}
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: black;
+			opacity: 0.4;
+			display: none;
+		}
+		.modal,
+		.overlay {
+			transition: all 0.5s ease;
+			display: block;
+			opacity: 0;
+			transform: scale(1.2);
+		}
+		.show-modal .modal {
+			opacity: 1;
+			transform: scale(1);
+		}
+		.show-modal .overlay {
+			opacity: 0.4;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero at quos voluptatem tempore laborum. Porro blanditiis minus veritatis alias eum libero quis? Voluptatum, ducimus odio veniam accusantium aliquid saepe eligendi!</p>
+		<p>Tempora rerum id labore ratione iusto totam esse! Ullam, dolor, recusandae, quaerat nulla veniam enim id dolore nesciunt natus hic ipsum corporis a eaque eos ad perferendis numquam omnis ex.</p>
+		<p>Officia, voluptatum, reprehenderit quibusdam mollitia quaerat repellendus deserunt nobis enim tenetur blanditiis dicta dolores aliquid ratione tempora ea excepturi veniam aspernatur dolorem et odit quas autem fugit aut atque animi!</p>
+		<p>Laborum, saepe sapiente at atque architecto ipsum repellendus ab non optio laboriosam sunt repellat quis ex officia consequatur voluptatem neque sequi soluta sint vero doloribus impedit quas fuga. Repudiandae, eaque.</p>
+		<div class="button normal">
+			Click Me!
+		</div>
+		<div class="button bonus">
+			Bonus!
+		</div>
+		<div class="button extra">
+			Bonus Bonus!
+		</div>
+	</div>
+	<div class="modal">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, cupiditate, deleniti, excepturi, debitis iste et ipsum praesentium ut eos nihil magni iure amet delectus reprehenderit ducimus nisi ullam veniam minima.
+	</div>
+	<div class="overlay"></div>
+	<script>
+		$(function() {
+		
+
+			$('.extra').on('click', function() {
+				$('body').addClass('show-modal');
+			});
+		});
+	</script>
+</body>
+</html>

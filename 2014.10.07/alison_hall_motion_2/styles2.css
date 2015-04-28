@@ -1,0 +1,317 @@
+
+/************************************
+BASIC SCENE
+************************************/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  -moz-box-sizing: border-width;
+  box-sizing: border-width;
+  /*border: 5px solid red;*/
+}
+
+.divContainer {
+  position: relative;
+  -webkit-animation: skyChange 20s infinite;
+  animation: skyChange 20s infinite;
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  width: 8%;
+  height: 16%;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-image: url("images/sun03.gif");
+
+/*  -webkit-transition: all 3s linear;
+  -moz-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;*/
+
+  -webkit-animation: sunRiseFall 20s infinite;
+  animation: sunRiseFall 20s infinite;
+}
+
+.moon {
+  position: absolute;
+  width: 8%;
+  height: 16%;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  background-image: url("images/moon.gif");
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+
+  -webkit-transition: all 3s ease-in;
+  -moz-transition: all 3s ease-in;
+  -o-transition: all 3s ease-in;
+  transition: all 3s ease-in;
+
+  -webkit-animation: moonRiseFall 20s infinite;
+  animation: moonRiseFall 20s infinite;
+}
+
+.ground {
+  background-color: darkgreen;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  z-index: 3;
+
+  -webkit-transition: all 3s linear;
+  -moz-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;
+
+  -webkit-animation: groundShade 20s infinite;
+  animation: groundShade 20s infinite;
+}
+
+.grass {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-image: url("images/grass.png");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 4;
+
+  -webkit-transition: all 3s linear;
+  -moz-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;
+}
+
+.grass:hover {
+  -webkit-animation: grassMove 5s infinite;
+  animation: grassMove 5s infinite;
+
+
+}
+
+/************************************
+ANIMATIONS
+************************************/
+
+@-webkit-keyframes sunRiseFall {
+  0% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    visibility: visible;
+    top: 100%;
+    left: 0%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  10% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    visibility: visible;
+    top: 60%;
+    left: 10%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  15% {
+    -webkit-transition: all 5s linear;
+    -moz-transition: all 5s linear;
+    -o-transition: all 5s linear;
+    transition: all 5s linear;
+    visibility: visible;
+    top: 10%;
+    left: 30%;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  25% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    top: 5%%;
+    left: 50%;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  35% {
+    -webkit-transition: all 5s linear;
+    -moz-transition: all 5s linear;
+    -o-transition: all 5s linear;
+    transition: all 5s linear;
+    top: 10%;
+    left: 70%;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  40% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    top: 60%;
+    left: 90%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    top: 100%;
+    left: 100%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  51% {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    visibility: hidden;
+  }
+  100%{
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes moonRiseFall {
+  0%{
+    visibility: hidden;
+  }
+  49%{
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+    top: 70%;
+    left: 0%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  75% {
+    top: 0%;
+    left: 50%;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    top: 70%;
+    left: 100%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes skyChange {
+  0% {
+    background-image: url("images/night_sky2.jpg");
+    background-size: cover;
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+  50% {
+    background-image: url("images/sky_colors-wide2.jpg");
+    background-size: cover;
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+  100% {
+    background-image: url("images/night_sky2.jpg");
+    background-size: cover;
+    -webkit-transition: background-image 3s ease-in;
+    transition: background-image 3s ease-in;
+  }
+}
+
+@-webkit-keyframes grassMove {
+  0% {
+    -webkit-transform: translateX(0em);
+    -moz-transform: translateX(0em);
+    -o-transform: translateX(0em);
+    transform: translateX(0em);
+
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -o-transform: skewX(0deg);
+    transform: skewX(0deg);
+  }
+  50% {
+    -webkit-transform: translateX(-2em);
+    -moz-transform: translateX(-2em);
+    -o-transform: translateX(-2em);
+    transform: translateX(-2em);
+
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -o-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+  }
+  100%{
+    -webkit-transform: translateX(0em);
+    -moz-transform: translateX(0em);
+    -o-transform: translateX(0em);
+    transform: translateX(0em);
+
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -o-transform: skewX(0deg);
+    transform: skewX(0deg);
+  }
+}
+
+@-webkit-keyframes groundShade {
+  0% {
+    background-color: #0F4510;
+  }
+  50% {
+    background-color: #0F8711;
+  }
+  100%{
+    background-color: #0F4510;
+  }
+}

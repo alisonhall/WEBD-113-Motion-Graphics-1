@@ -1,0 +1,31 @@
+
+/******** Example 3a - expands the box down on hover *********/
+
+/*.box{
+	width:400px;
+	height: 50px;
+	background-color:red;
+	transition: height 0.5s ease;
+}
+
+.box:hover {
+	height: 200px;
+}
+*/
+
+
+/******** Example 3b - expands the box down on hover, and also moves it down **********/
+
+.box{
+	width:400px;
+	height: 50px;
+	background-color:red;
+	top: 0px;
+	transition: all 0.5s ease;
+}
+
+.box:hover {
+	position: absolute;
+	top:50px;
+	height: 200px;
+}

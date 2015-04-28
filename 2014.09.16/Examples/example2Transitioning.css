@@ -1,0 +1,57 @@
+
+/******** Experimenting with different transitions ********/
+
+.box{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  opacity: 1;
+}
+
+.box:hover{
+  border-radius: 50%;
+}
+
+#box8:hover{
+	opacity: 0;
+}
+
+#box1{
+	transition: all 0.5s ease;
+}
+
+#box2{
+	transition: all 0.5s linear;
+}
+
+#box3{
+	transition: all 0.5s ease-in;
+}
+
+#box4{
+	transition: all 0.5s ease-in-out;
+}
+
+#box5{
+	transition: all 0.5s ease-out;
+}
+
+#box6{
+	transition: all 0.5s step-start;
+}
+
+#box7{
+	transition: all 0.5s step-end;
+}
+
+#box8{
+	transition: all 0.5s ease;
+}
+
+#box9{
+	/*transition: all 2s ease;*/
+}
+
+#box10{
+	transition: all 5s ease;
+}

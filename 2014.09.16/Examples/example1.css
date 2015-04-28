@@ -1,0 +1,25 @@
+
+/****** Code for two coloured boxes ******/
+
+h1{
+	font-size: 52px;
+}
+
+.box{
+	width:200px;
+	height:250px;
+	background-color:purple;
+}
+
+#main-footer{
+	width:500px;
+	height:150px;
+	background-color:orange;
+}
+
+
+/***** Code for multiple classes. First line is html, second is css ******/
+
+/*<div class="header logo"></div>
+.header.logo{
+}*/

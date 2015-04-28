@@ -1,0 +1,148 @@
+
+/************************************
+BASIC SCENE
+************************************/
+
+body{
+  margin: 0px;
+  padding: 0px;
+  /*background-image: url("images/sky_colors-wide.jpg");*/
+  -webkit-transition: background-image 5s ease-in;
+  transition: background-image 5s ease-in;
+  -webkit-animation: skyChange 20s infinite;
+}
+
+.sky{
+  position: absolute;
+  top:0px;
+  left:0px;
+  right: 0;
+  bottom: 0;
+  margin:0px;
+  padding:0px;
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+
+}
+
+.sky img{
+/*  height: 800px;
+  width: 800px;*/
+}
+
+.sun {
+/*  width: 100px;
+  height: 100px;*/
+  /*background-color: yellow;*/
+  /*border-radius: 50%;*/
+  float: left;
+  position: relative;
+  top: 600px;
+  left: 0px;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-animation: day 10s infinite;
+}
+
+.moon{
+/*  width: 100px;
+  height: 100px;*/
+  /*background-color: white;*/
+  /*border-radius: 50%;*/
+  float: left;
+  position: relative;
+  top: 600px;
+  left: 0px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: night 10s infinite;
+}
+
+.ground{
+  background-color: darkgreen;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  display: inline-block;
+  float: left;
+}
+
+.grass{
+  height: 200px;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  display: inline-block;
+  float: left;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+
+
+
+/************************************
+ANIMATIONS
+************************************/
+
+@-webkit-keyframes day {
+  0% {
+    top: 100%;
+    left: 0%;
+  }
+  25% {
+    top: 20%%;
+    left: 50%;
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes night {
+  50% {
+    top: 100%;
+    left: 0%;
+  }
+  75% {
+    top: 20%;
+    left: 50%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes skyChange {
+  0% {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/sky_colors-wide.jpg");*/
+    -webkit-transition: background-image 5s ease-in;
+    transition: background-image 5s ease-in;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/night_sky.jpg");
+    -webkit-transition: background-image 5s ease-in;
+    transition: background-image 5s ease-in;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/sky_colors-wide.jpg");
+    -webkit-transition: background-image 5s ease-in;
+    transition: background-image 5s ease-in;
+  }
+}
